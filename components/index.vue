@@ -10,12 +10,12 @@
 
         <ion-tab-button tab="music" href="/music">
           <ion-icon :icon="ioniconsMusicalNotesOutline" />
-          <ion-label>Play Music</ion-label>
+          <ion-label>Musik</ion-label>
         </ion-tab-button>
 
         <ion-tab-button tab="hub" href="/hub">
           <ion-icon :icon="ioniconsLibraryOutline" />
-          <ion-label>Your Hub</ion-label>
+          <ion-label>Hub</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
