@@ -23,7 +23,8 @@ export const usePiniaStore = defineStore('counter', {
                 "thumbnail": "/images/sleeping_dog2.jpg"
             }
         ],
-        currentSound: 'TestSound1',
+        currentSoundFile: 'TestSound1',
+        currentThumbnailFile: "/images/relaxed_dog.jpg",
         currentSoundIndex: 0,
         currentSoundInterval: null,
         currentSoundDuration: 0,
@@ -34,18 +35,26 @@ export const usePiniaStore = defineStore('counter', {
     }),
     getters: {
         currentSoundName(state) {
-            const soundIndex = Data.map(e => e.id).indexOf(state.currentSound)
+            const soundIndex = Data.map(e => e.id).indexOf(state.currentSoundFile)
         },
     },
     actions: {
+        mqttSend(payload) {
+            const { $mqttPublish } = useNuxtApp();
+            $mqttPublish('raspberry/topic', JSON.stringify(payload))
+        },
         soundPreload() {
             this.audio = new Audio(this.sounds[this.currentSoundIndex].location)
+            this.currentSoundFile = this.sounds[this.currentSoundIndex].location.split("/").pop()
+            this.currentThumbnailFile = this.sounds[this.currentSoundIndex].thumbnail.split("/").pop()
 
             this.audio.onloadedmetadata = (event) => {
                 this.currentSoundDuration = Math.ceil(this.audio.duration)
             };
         },
         soundPlay() {
+            this.mqttSend({"action": "play","payload": {"sound_name": this.currentSoundFile, "thumbnail_name": this.currentThumbnailFile}})
+
             this.audio.play();
 
             this.currentSoundInterval = setInterval(() => {
@@ -54,6 +63,15 @@ export const usePiniaStore = defineStore('counter', {
 
         },
         soundPause() {
+            this.mqttSend({"action": "pause", "payload": {}})
+
+            this.audio.pause();
+
+            clearInterval(this.currentSoundInterval)
+        },
+        soundStop() {
+            this.mqttSend({"action": "stop", "payload": {}})
+
             this.audio.pause();
 
             clearInterval(this.currentSoundInterval)
@@ -65,7 +83,7 @@ export const usePiniaStore = defineStore('counter', {
             else {
                 this.currentSoundIndex = 0
             }
-            this.soundPause()
+            this.soundStop()
             this.soundPreload();
             this.soundPlay()
         },
@@ -76,7 +94,7 @@ export const usePiniaStore = defineStore('counter', {
             else {
                 this.currentSoundIndex -= 1
             }
-            this.soundPause()
+            this.soundStop()
             this.soundPreload();
             this.soundPlay()
         },
