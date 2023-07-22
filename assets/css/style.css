@@ -1,0 +1,36 @@
+
+
+body {
+    color: red;
+    font-family: 'Pacifico';
+}
+
+.welcome-msg {
+    margin-top: 20px;
+}
+
+.app-name {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+.bar-chart {
+    padding: 10px;
+    background-color: #D6AB86;
+    border-radius: 10px;
+    color: white;
+}
+
+.card {
+    background-color: #D6AB86;
+    border-radius: 10px;
+}
+
+.card-text {
+    color: white;
+    font-size: 14px;
+    line-height: normal;
+}

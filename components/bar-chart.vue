@@ -9,6 +9,7 @@
 import { Bar } from 'vue-chartjs'
 
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import { resolveDirective } from 'nuxt/dist/app/compat/capi';
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
