@@ -7,18 +7,21 @@ export const usePiniaStore = defineStore('counter', {
             {
                 "id": "TestSound1",
                 "name": "Test sound 1",
+                "interpret": "Interpret 1",
                 "location": "/sounds/testsound1.mp3",
                 "thumbnail": "/images/relaxed_dog.jpg"
             },
             {
                 "id": "TestSound2",
                 "name": "Test sound 2",
+                "interpret": "Interpret 2",
                 "location": "/sounds/testsound2.mp3",
                 "thumbnail": "/images/sleeping_dog.jpg"
             },
             {
                 "id": "TestSound3",
                 "name": "Test sound 3",
+                "interpret": "Interpret 3",
                 "location": "/sounds/testsound3.mp3",
                 "thumbnail": "/images/sleeping_dog2.jpg"
             }
@@ -28,7 +31,9 @@ export const usePiniaStore = defineStore('counter', {
         currentSoundIndex: 0,
         currentSoundInterval: null,
         currentSoundDuration: 0,
+        currentSoundDurationDisplayed: '0.00',
         currentSoundTime: 0,
+        currentSoundTimeDisplayed: '0.00',
         audio: null,
         test: 50
 
@@ -37,6 +42,12 @@ export const usePiniaStore = defineStore('counter', {
         currentSoundName(state) {
             const soundIndex = Data.map(e => e.id).indexOf(state.currentSoundFile)
         },
+    },
+    setters: {
+        setSong(soundFile, thumbnailFile) {
+            this.currentSoundFile = soundFile;
+            this.currentThumbnailFile = thumbnailFile;
+        }
     },
     actions: {
         mqttSend(payload) {
@@ -49,7 +60,15 @@ export const usePiniaStore = defineStore('counter', {
             this.currentThumbnailFile = this.sounds[this.currentSoundIndex].thumbnail.split("/").pop()
 
             this.audio.onloadedmetadata = (event) => {
-                this.currentSoundDuration = Math.ceil(this.audio.duration)
+                let soundDurationSeconds = Math.ceil(this.audio.duration);
+                let soundMinutes = Math.floor(soundDurationSeconds / 60);
+                if (soundMinutes > 0) {
+                    this.currentSoundDurationDisplayed = soundMinutes + '.' + (soundDurationSeconds - soundMinutes * 60)
+                } else {
+                    this.currentSoundDurationDisplayed = '0.' + soundDurationSeconds;
+                }
+
+                this.currentSoundDuration = soundDurationSeconds;
             };
         },
         soundPlay() {
@@ -58,9 +77,26 @@ export const usePiniaStore = defineStore('counter', {
             this.audio.play();
 
             this.currentSoundInterval = setInterval(() => {
-                this.currentSoundTime = Math.ceil(this.audio.currentTime)
-            }, 1000);
+                let soundDurationSeconds = Math.ceil(this.audio.currentTime);
+                let soundMinutes = Math.floor(soundDurationSeconds / 60);
+                let soundMinutesInSeconds = soundMinutes * 60;
+                let secondsAfterDecimal = soundDurationSeconds - soundMinutesInSeconds;
+                if (soundMinutes > 0) {
+                    if (secondsAfterDecimal < 10) {
+                        this.currentSoundTimeDisplayed = soundMinutes + '.0' + secondsAfterDecimal;
+                    } else {
+                        this.currentSoundTimeDisplayed = soundMinutes + '.' + secondsAfterDecimal;
+                    }
+                } else {
+                    if (secondsAfterDecimal < 10) {
+                        this.currentSoundTimeDisplayed = '0.0' + soundDurationSeconds;
+                    } else {
+                        this.currentSoundTimeDisplayed = '0.' + soundDurationSeconds;
+                    }
+                }
 
+                this.currentSoundTime = soundDurationSeconds;
+            }, 1000);
         },
         soundPause() {
             this.mqttSend({"action": "pause", "payload": {}})

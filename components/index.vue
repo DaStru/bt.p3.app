@@ -1,11 +1,10 @@
-<template>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  </head>
+<script setup>
 
+</script>
+
+<template>
   <ion-page>
+    <help></help>
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
       <ion-tab-bar slot="bottom">
@@ -19,6 +18,11 @@
           <ion-label>Musik</ion-label>
         </ion-tab-button>
 
+        <ion-tab-button tab="playlist" href="/playlist">
+          <ion-icon :icon="ioniconsListOutline" />
+          <ion-label>Bibliothek</ion-label>
+        </ion-tab-button>
+
         <ion-tab-button tab="hub" href="/hub">
           <ion-icon :icon="ioniconsLibraryOutline" />
           <ion-label>Hub</ion-label>
@@ -26,4 +30,9 @@
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
+
 </template>
+
+<style lang="css">
+@import '../assets/css/style.css';
+</style>

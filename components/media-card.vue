@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col bg-slate-500 w-full rounded-md">
+    <div class="flex flex-col w-full rounded-md">
         <div class="ml-2">
             <h4>
                 {{ title }}

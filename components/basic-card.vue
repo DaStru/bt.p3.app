@@ -1,12 +1,12 @@
 <template>
-    <div class="flex flex-col bg-slate-500 w-full rounded-md">
+    <div class="flex flex-col w-full rounded-md">
         <div class="ml-2">
             <h4>
                 {{ title }}
             </h4>
         </div>
         <div class="flex mx-2">
-            <div v-if="imageLink.length > 0" class="">
+            <div v-if="imageLink.length > 0" style="min-width: 6rem; min-height: 6rem;">
                 <img class="object-cover w-24 h-24 rounded-md" :src="imageLink" />
             </div>
             <div v-if="content.length > 0" class="mx-2">
