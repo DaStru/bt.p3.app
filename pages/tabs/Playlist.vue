@@ -16,8 +16,8 @@
             </div>
           </div>
             <play-card
-                interpret="Relaxmydog"
-                songName="Peaceful Relaxation Music"
+                interpret="Calm Universe"
+                songName="Soothing Dog Sounds"
                 imgLink="../images/relaxed_dog.jpg"
                 @click="store.playSpecificSound(1)">
             </play-card>
@@ -28,8 +28,8 @@
                 @click="store.playSpecificSound(2)">
             </play-card>
             <play-card
-                interpret="Relaxmydog"
-                songName="Peaceful Relaxation Music"
+                interpret="Little Cutie"
+                songName="Musik Til Hunde"
                 imgLink="../images/sleeping_dog2.jpg"
                 @click="store.playSpecificSound(3)">
             </play-card>
