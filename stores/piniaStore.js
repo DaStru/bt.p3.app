@@ -6,22 +6,22 @@ export const usePiniaStore = defineStore('counter', {
         sounds: [    
             {
                 "id": "TestSound1",
-                "name": "Test sound 1",
-                "interpret": "Interpret 1",
+                "name": "Calm Universe",
+                "interpret": "Soothing Dog Sounds",
                 "location": "/sounds/testsound1.mp3",
                 "thumbnail": "/images/relaxed_dog.jpg"
             },
             {
                 "id": "TestSound2",
-                "name": "Test sound 2",
-                "interpret": "Interpret 2",
+                "name": "Peaceful Relaxation Music",
+                "interpret": "Relaxmydog",
                 "location": "/sounds/testsound2.mp3",
                 "thumbnail": "/images/sleeping_dog.jpg"
             },
             {
                 "id": "TestSound3",
-                "name": "Test sound 3",
-                "interpret": "Interpret 3",
+                "name": "Little Cutie",
+                "interpret": "Musik Til Hunde",
                 "location": "/sounds/testsound3.mp3",
                 "thumbnail": "/images/sleeping_dog2.jpg"
             }
