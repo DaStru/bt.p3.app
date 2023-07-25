@@ -123,6 +123,16 @@ export const usePiniaStore = defineStore('counter', {
             this.soundPreload();
             this.soundPlay()
         },
+        playSpecificSound(index) {
+            if (index <= this.sounds.length) {
+                this.currentSoundIndex = index-1;
+            } else {
+                this.currentSoundIndex = 0
+            }
+            this.soundStop()
+            this.soundPreload();
+            this.soundPlay()
+        },
         soundPrevious() {
             if (this.currentSoundIndex == 0){
                 this.currentSoundIndex = this.sounds.length-1

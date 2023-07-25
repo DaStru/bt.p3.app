@@ -18,17 +18,20 @@
             <play-card
                 interpret="Relaxmydog"
                 songName="Peaceful Relaxation Music"
-                imgLink="../images/relaxed_dog.jpg">
+                imgLink="../images/relaxed_dog.jpg"
+                @click="store.playSpecificSound(1)">
             </play-card>
             <play-card
                 interpret="Relaxmydog"
                 songName="Peaceful Relaxation Music"
-                imgLink="../images/sleeping_dog.jpg">
+                imgLink="../images/sleeping_dog.jpg"
+                @click="store.playSpecificSound(2)">
             </play-card>
             <play-card
                 interpret="Relaxmydog"
                 songName="Peaceful Relaxation Music"
-                imgLink="../images/sleeping_dog2.jpg">
+                imgLink="../images/sleeping_dog2.jpg"
+                @click="store.playSpecificSound(3)">
             </play-card>
         </div>
         
@@ -36,3 +39,9 @@
       </ion-content>
     </ion-page>
   </template>
+
+<script setup>
+import { usePiniaStore } from '@/stores/piniaStore'
+const store = usePiniaStore();
+
+</script>
