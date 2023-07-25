@@ -3,7 +3,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>
-          <img src="../../public/images/Harmony.png" alt="">
+          <img src="/images/Harmony.png" alt="">
         </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -16,7 +16,7 @@
         <div>
           Die Konditionierung von Hunden ist eine bewährte Methode, um gewünschtes Verhalten zu fördern und unerwünschtes Verhalten zu korrigieren. Wusstest du, dass Musik ein wirksames Werkzeug sein kann, um deinen Hund zu konditionieren? In diesem Blogbeitrag beschreiben wir, wie du Musik gezielt einsetzen kannst, um das Verhalten deines Hundes zu beeinflussen und ihn zu konditionieren.
           <br><br>
-          <img src="../../public/images/dog_training2.jpg" alt="">
+          <img src="/images/dog_training2.jpg" alt="">
           <br>
           <span style="font-weight: bold">Die Kraft der musikalischen Konditionierung:</span> Die musikalische Konditionierung beruht auf der Idee, dass der Hund bestimmte musikalische Signale mit bestimmtem Verhalten assoziiert. Durch wiederholtes Abspielen der Musik in Verbindung mit der gewünschten Reaktion deines Hundes kann er lernen, diese Reaktion auf das musikalische Signal hin zu wiederholen.
           <br><br>

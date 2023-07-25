@@ -3,7 +3,7 @@
       <ion-header>
         <ion-toolbar>
           <ion-title>
-            <img src="../../public/images/Harmony.png" alt="">
+            <img src="/images/Harmony.png" alt="">
           </ion-title>
         </ion-toolbar>
       </ion-header>
@@ -18,17 +18,17 @@
             <play-card
                 interpret="Relaxmydog"
                 songName="Peaceful Relaxation Music"
-                imgLink="../public/images/relaxed_dog.jpg">
+                imgLink="../images/relaxed_dog.jpg">
             </play-card>
             <play-card
                 interpret="Relaxmydog"
                 songName="Peaceful Relaxation Music"
-                imgLink="../public/images/sleeping_dog.jpg">
+                imgLink="../images/sleeping_dog.jpg">
             </play-card>
             <play-card
                 interpret="Relaxmydog"
                 songName="Peaceful Relaxation Music"
-                imgLink="../public/images/sleeping_dog2.jpg">
+                imgLink="../images/sleeping_dog2.jpg">
             </play-card>
         </div>
         

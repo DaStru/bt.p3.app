@@ -21,7 +21,7 @@ function openPopUp(id) {
     <ion-header>
       <ion-toolbar>
         <ion-title>
-          <img src="../../public/images/Harmony.png" alt="">
+          <img src="/images/Harmony.png" alt="">
         </ion-title>
       </ion-toolbar>
     </ion-header>

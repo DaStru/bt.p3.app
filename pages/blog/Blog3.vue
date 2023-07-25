@@ -3,7 +3,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>
-          <img src="../../public/images/Harmony.png" alt="">
+          <img src="/images/Harmony.png" alt="">
         </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -16,7 +16,7 @@
         <div>
           Hunde sind wie wir Menschen empfindsame Lebewesen und können in bestimmten Situationen gestresst sein. Es ist wichtig, als verantwortungsbewusster Hundebesitzer zu erkennen, wann unser geliebter Vierbeiner gestresst ist und angemessen darauf zu reagieren. In diesem Blogbeitrag werden wir einige bewährte Strategien und Tipps aufzeigen, um deinem Hund in stressigen Situationen zu helfen und seine Wohlbefinden zu fördern.
           <br><br>
-          <img src="../../public/images/dog_win.jpg">
+          <img src="/images/dog_win.jpg">
           <br>
           Beobachte und erkenne die Stresssignale: Hunde zeigen Stress auf verschiedene Weisen. Einige häufige Anzeichen sind übermäßiges Hecheln, Zittern, Vermeidungsverhalten, übermäßiges Kratzen oder Lecken, erhöhte Anspannung, veränderte Körperhaltung oder Unruhe. Indem du die individuellen Stresssignale deines Hundes beobachtest, kannst du frühzeitig erkennen, wann er gestresst ist und angemessen reagieren.
           <br><br>

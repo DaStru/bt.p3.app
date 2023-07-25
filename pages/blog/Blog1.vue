@@ -3,7 +3,7 @@
     <ion-header>
       <ion-toolbar>
         <ion-title>
-          <img src="../../public/images/Harmony.png" alt="">
+          <img src="/images/Harmony.png" alt="">
         </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -15,7 +15,7 @@
         <div>Veröffentlich am 28.08.2023 von Barbara</div>
         <div>Musik ist eine Kunstform, die uns Menschen seit Jahrtausenden begleitet und vielfältige Auswirkungen auf unsere Emotionen und Stimmungen hat. Aber wusstest du, dass Musik auch das Verhalten deines geliebten Vierbeiners beeinflussen kann? In diesem Blogbeitrag erklären wir, wie Musik Hunde beeinflusst und welche Art von Musik sich positiv auf sein Verhalten auswirken kann.
             <br><br>
-            <img src="../../public/images/dog_and_woman.jpg" alt="">
+            <img src="/images/dog_and_woman.jpg" alt="">
             <br>
             <span style="font-weight: bold">Die Wirkung von Musik auf Hunde:</span> Hunde haben ein ausgeprägtes Gehör und sind in der Lage, verschiedene Frequenzen und Klangnuancen wahrzunehmen. Studien haben gezeigt, dass Musik eine beruhigende oder anregende Wirkung auf Hunde haben kann, ähnlich wie bei uns Menschen. Ruhige, melodische Musik kann die Entspannung fördern und Stress reduzieren, während schnellere und lautere Musik den Hund möglicherweise aufregen oder irritieren kann.
             <br><br>
@@ -25,7 +25,7 @@
             <br><br>
             <span style="font-weight: bold">Musik als Hintergrundbeschallung:</span> Das Abspielen von Musik als Hintergrundgeräusch kann deinem Hund helfen, sich sicher und geborgen zu fühlen. Besonders wenn du deinen Hund alleine zu Hause lässt, kann ruhige Musik im Hintergrund die Stille brechen und deinem Hund ein Gefühl der Gesellschaft vermitteln. Achte jedoch darauf, dass die Lautstärke angemessen ist und die Musik nicht zu überwältigend wird.
             <br><br>
-            <img src="../../public/images/dog_training.jpg" alt="">
+            <img src="/images/dog_training.jpg" alt="">
             <br>
             <span style="font-weight: bold">Gemeinsames Musikerlebnis:</span> Musik kann nicht nur den Hund, sondern auch dich als Hundebesitzer beeinflussen. Das gemeinsame Musikhören kann deine positive Bindung zwischen dir und deinem Hund stärken. Oxytocin, auch bekannt als „Kuschelhormon“ oder „Bindungshormon“, wird durch die positive soziale Interaktion, wie das gemeinsame Musikhören, freigesetzt und kann eure Stimmungen und eure Beziehung zueinander positiv beeinflussen. Es ist erstaunlich, wie die Kraft der Musik und die Wirkung von Oxytocin euer gemeinsames Erlebnis noch intensiver machen können.
             <br><br>

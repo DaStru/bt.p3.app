@@ -3,13 +3,12 @@ export default defineNuxtConfig({
   plugins: [
     "plugins/mqtt.js"
   ],
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     '@nuxtjs/ionic',
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
   ],
-  ssr: false,
   ionic: {
     css: {
       utilities: true

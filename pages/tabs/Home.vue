@@ -20,7 +20,7 @@ function openPopUp(id) {
     <ion-header>
       <ion-toolbar>
         <ion-title>
-          <img src="../../public/images/Harmony.png" alt="">
+          <img src="/images/Harmony.png" alt="">
         </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -56,7 +56,7 @@ function openPopUp(id) {
           <router-link to="music">
           <div class="flex flex-col card">
             <div class="last-played flex flex-row justify-between">
-              <img src="../../public/images/sleeping_dog.jpg" alt="" class="play-image-s">
+              <img src="/images/sleeping_dog.jpg" alt="" class="play-image-s">
               <div class="played-text">
                 <div class="played-interpret">
                   Relaxmydog
